@@ -4,5 +4,5 @@ from django.urls import path
 from backend import views
 urlpatterns = [
     path('login/', views.my_view),
-    path('recipie/',views.getRecipe),
+    path('recipe/',views.getRecipe),
 ]

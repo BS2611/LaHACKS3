@@ -39,14 +39,14 @@ def getRecipe(request):
    if request.method == 'POST':
     data = json.loads(request.body) # parse the JSON data into a dictionary
     # do something with the data
-    if data['Ingredient'] is None :
+    if data['ingredients'] is None :
         raise TypeError
     else:
         username = data['username']
-        ingredient = data['password']
+        ingredient = data['ingredients']
         DbManager.addUserIngridients(username,ingredient)
         food = FoodProcessor()
-        food.generateRecipes()
+        food.generateRecipes(ingredient)
         names = food.getNameList()
         urls = food.getNameList()
         combine_list = []

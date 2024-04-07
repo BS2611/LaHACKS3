@@ -1,4 +1,4 @@
-from Backend.QueryGenerator import QueryGenerator
+from Backend import QueryGenerator
 import requests
 
 
